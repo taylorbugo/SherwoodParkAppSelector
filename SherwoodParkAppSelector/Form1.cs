@@ -46,7 +46,10 @@ namespace SherwoodParkAppSelector
             int offset = 0;
             
             Data = System.IO.File.ReadAllText(".\\Parks Massaged No Spatial.csv");
-            Data = Data.Replace("\r\n", ",");
+            //Windows newline with carriage return
+            //Data = Data.Replace("\r\n", ",");
+            //Posix newline without carriage return
+            Data = Data.Replace("\n", ",");
             ParsedData = Data.Split(',');
             ParkList = new Park[(ParsedData.Length/12)-1];
             
