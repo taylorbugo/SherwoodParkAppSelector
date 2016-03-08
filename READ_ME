@@ -2,3 +2,5 @@ The executable requires the "Parks Massaged No Spatial.csv" file to be in the sa
 executable to work properly.
 
 The file is at the root of the respository.
+
+The project was built using Visual Studio Community 2015.
