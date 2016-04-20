@@ -51,6 +51,7 @@ namespace SherwoodParkAppSelector
             //Posix newline without carriage return
             Data = Data.Replace("\n", ",");
             ParsedData = Data.Split(',');
+            //Line 55 creates memory leak that isn't taken care of properly
             ParkList = new Park[(ParsedData.Length/12)-1];
             
             for (int row = 0; row < (ParsedData.Length/12)-1; row++)
